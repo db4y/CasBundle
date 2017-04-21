@@ -59,7 +59,22 @@ db4y_cas:
     restricted: db4y_cas.restricted
 ```
 
+Configure the security firewall:
 
+```yaml
+# app/config/security.yml
+
+security:
+    firewalls:
+        main:
+            anonymous: ~
+            security: true
+            pattern: ^/admin
+            provider: your_provider
+            guard:
+                authenticators:
+                    - db4y_cas.cas_authenticator
+```
 
 Add the routes to your app :
 
