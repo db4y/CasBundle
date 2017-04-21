@@ -1,0 +1,11 @@
+services:
+#    db4y_cas.example:
+#        class: db4y\CasBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    db4y_cas.cas_authenticator:
+        class:      db4y\CasBundle\Security\CasAuthenticator
+        arguments:
+            - {host: '', port: '', context: ''}
+            - "@router"
+            - acces_reserve
+            - "@event_dispatcher"
