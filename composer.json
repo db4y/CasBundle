@@ -10,5 +10,9 @@
         "psr-4": {
             "db4y\\CasBundle\\": ""
         }
+    },
+    "require-dev": {
+        "symfony/symfony": "^2.8|^3.0",
+        "sensio/framework-extra-bundle": "^3.0.2"
     }
 }
